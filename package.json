@@ -1,0 +1,25 @@
+{
+  "name": "whatsapp-ping-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp bot to check ping status of IP addresses in private network",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "ping",
+    "network",
+    "monitoring"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "whatsapp-web.js": "^1.23.0",
+    "qrcode-terminal": "^0.12.0",
+    "ping": "^0.4.4",
+    "puppeteer": "^21.0.0"
+  }
+}
