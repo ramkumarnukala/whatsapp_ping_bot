@@ -1,9 +1,10 @@
 # WhatsApp Ping Bot
 
-Monitor network devices in your private network via WhatsApp. Works on Ubuntu/Linux.
+Monitor network devices in your private network via WhatsApp. Works on Ubuntu/Linux and Windows.
 
 ## 🚀 Quick Start
 
+### Ubuntu/Linux:
 ```bash
 # 1. Setup
 chmod +x *.sh
@@ -15,6 +16,19 @@ chmod +x *.sh
 
 # 3. Next time - Auto-start in background
 ./start.sh
+```
+
+### Windows:
+```cmd
+REM 1. Setup
+setup.bat
+
+REM 2. First time - Login with QR code
+start.bat
+REM Scan QR with WhatsApp → Press Ctrl+C
+
+REM 3. Next time - Start bot
+start.bat
 ```
 
 ## 📱 Usage
@@ -31,6 +45,7 @@ Send these commands in WhatsApp (works in groups and private chats):
 
 ## 🔧 Management
 
+### Ubuntu/Linux:
 ```bash
 ./start.sh          # Start bot (auto-background if logged in)
 ./start.sh --relogin # Force relogin with new QR code
@@ -39,13 +54,29 @@ Send these commands in WhatsApp (works in groups and private chats):
 ./logs.sh           # View logs
 ```
 
+### Windows:
+```cmd
+start.bat           # Start bot
+start.bat --relogin # Force relogin with new QR code
+stop.bat            # Stop bot
+status.bat          # Check if running
+logs.bat            # View logs
+```
+
 ## 🔑 Relogin (Session Expired)
 
 If WhatsApp session expires:
 
+### Ubuntu/Linux:
 ```bash
 ./start.sh --relogin
 # Scan new QR code → Press Ctrl+C → Done
+```
+
+### Windows:
+```cmd
+start.bat --relogin
+REM Scan new QR code → Press Ctrl+C → Run start.bat again
 ```
 
 ## 📦 What You Get
@@ -58,7 +89,7 @@ If WhatsApp session expires:
 
 ## 💡 Requirements
 
-- Ubuntu/Linux server
+- **Ubuntu/Linux** or **Windows 10/11**
 - Node.js 14+
 - WhatsApp account
 
